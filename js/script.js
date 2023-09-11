@@ -1,22 +1,21 @@
-const getDogImageButton = document.getElementById("getDogImage");
-const dogImageContainer = document.getElementById("dogImageContainer");
+const dogImage = document.getElementById('dogImage');
+const audio = document.getElementById('audio');
+let isPlaying = false;
+async function fetchRandomDogImage() {
+    try {
+        const response = await fetch('https://dog.ceo/api/breeds/image/random');
+        const data = await response.json();
+        const imageUrl = data.message;
+        dogImage.src = imageUrl;
+    } catch (error) {
+        console.error('Error al cargar la imagen del perro:', error);
+    }
+}
 
-getDogImageButton.addEventListener("click", () => {
-    /* URL de la Dog API para obtener una imagen aleatoria */
-    const apiUrl = "https://dog.ceo/api/breeds/image/random";
-    /* Realiza la solicitud a la API */
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            /* Verifica si la respuesta contiene una URL de imagen */
-            if (data && data.message) {
-                /* Crea una imagen y establece su fuente */
-                const dogImage = document.createElement("img");
-                dogImage.src = data.message;
-                /* Limpia el contenedor de imágenes existentes y agrega la nueva imagen */
-                dogImageContainer.innerHTML = "";
-                dogImageContainer.appendChild(dogImage);
-            }
-        })
-        .catch(error => console.error("Error al obtener la imagen del perro:", error));
+dogImage.addEventListener('click', () => {
+    if (!isPlaying) {
+        audio.play();
+        isPlaying = true;
+    }
+    fetchRandomDogImage();
 });

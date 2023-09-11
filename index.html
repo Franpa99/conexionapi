@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Dog API</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Woof</title>
 </head>
 <body>
-    <h1>Imágenes Aleatorias de Perros</h1>
-    <button id="getDogImage">Obtener Imagen</button>
-    <div id="dogImageContainer">
-        <!-- Imágenes acá -->
+    <div class="container">
+        <img id="dogImage" src="images/bone.png" alt="Bone Image">
     </div>
-    <audio id="myAudio" loop style="display: none">
-        <source id="audioSource" src="audio/dogsong.mp3" type="audio/mpeg">
+    <audio id="audio" loop>
+        <source src="audio/dogsong.mp3" type="audio/mpeg">
     </audio>
     <script src="js/script.js"></script>
 </body>
