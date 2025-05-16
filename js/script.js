@@ -8,11 +8,11 @@ let isLoading = false;
 let minnieMode = false;
 
 const minnieImages = [
-    '3c361ba7-1d84-4aa5-b889-a2a4306390ae.jpg',
-    '73523c87-7ab5-4aca-83e8-0f92b707b339.jpg',
-    '74945961-ac6b-406a-854b-be6a39a9b262.jpg',
-    '90eab1c0-a81a-425b-af1d-c3162f65716f.jpg',
-    'aa51f1f6-e131-42b5-bb31-6f3ab0d9f815.jpg'
+    'images/minnie/3c361ba7-1d84-4aa5-b889-a2a4306390ae.jpg',
+    'images/minnie/73523c87-7ab5-4aca-83e8-0f92b707b339.jpg',
+    'images/minnie/74945961-ac6b-406a-854b-be6a39a9b262.jpg',
+    'images/minnie/90eab1c0-a81a-425b-af1d-c3162f65716f.jpg',
+    'images/minnie/aa51f1f6-e131-42b5-bb31-6f3ab0d9f815.jpg'
 ];
 
 function formatBreedName(url) {
