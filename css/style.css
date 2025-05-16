@@ -1,26 +1,28 @@
 body {
     background-color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .container {
     cursor: pointer;
     max-width: 100vw;
     max-height: 100vh;
-    text-align: center;
 }
 
 #dogImage {
     max-width: 100vw;
-    max-height: 90vh;
+    max-height: 70vh;
     height: auto;
     width: auto;
-    display: block;
     margin: 0 auto;
     transition: opacity 0.5s ease;
     opacity: 1;
@@ -28,8 +30,14 @@ body {
 
 #loader {
     color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#breedName {
     font-size: 1.2rem;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .hidden {
