@@ -8,10 +8,31 @@
     <title>Woof</title>
 </head>
 <body>
+    <!-- Mode Indicator -->
+    <div id="modeIndicator" class="mode-indicator hidden">
+        💕 MODO MINNIE 💕
+    </div>
+    
+    <!-- Counter -->
+    <div id="counter" class="counter">
+        Perros Vistos: <span id="dogCount">0</span>
+    </div>
+    
+    <!-- Mute Button -->
+    <button id="muteBtn" class="mute-btn" title="Silenciar/Activar sonido">
+        🔊
+    </button>
+    
     <div class="container">
         <img id="dogImage" src="images/bone.png" alt="Bone Image">
-        <div id="loader" class="hidden">Cargando...</div>
-        <div id="breedName" class="hidden"></div>
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>Cargando...</p>
+        </div>
+        <div id="breedInfo" class="breed-info hidden">
+            <div id="breedName" class="breed-name"></div>
+            <div id="dogFact" class="dog-fact"></div>
+        </div>
     </div>
     
     <audio id="audio" loop>
